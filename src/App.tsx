@@ -1,10 +1,11 @@
-import { Button } from "./components/ui/button";
+import Home from "./components/home/home/Home";
+
 
 
 const App = () => {
   return (
     <div>
-      <Button>Click me</Button>
+      <Home></Home>
     </div>
   );
 };
