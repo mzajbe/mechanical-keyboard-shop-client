@@ -17,6 +17,7 @@ module.exports = {
       },
     },
     extend: {
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -51,6 +52,19 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom Colors for Mechanical Keyboard Website
+        customPrimary: {
+          DEFAULT: "#cad2c5",  // Off-White
+          foreground: "#000000",  // Black
+        },
+        customAccent1: {
+          DEFAULT: "#52796f",  // Burnt Orange
+          foreground: "#FFFFFF",  // White
+        },
+        customAccent2: {
+          DEFAULT: "#84a98c",  // Olive Green
+          foreground: "#FFFFFF",  // White
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -66,12 +80,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        'zoom-out': {
+          '0%': {
+            transform: 'scale(1)',
+          },
+          '100%': {
+            transform: 'scale(0.95)',
+          },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'zoom-out': 'zoom-out 0.3s ease-in-out',
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+}}
