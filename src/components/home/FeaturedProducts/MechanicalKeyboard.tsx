@@ -15,7 +15,7 @@ const MechanicalKeyboard = () => {
   return (
     <div className="container mx-auto p-4 max-w-7xl">
       <div className="flex flex-wrap -m-4">
-        {products.map((product: TProduct) => (
+        {products.slice(0,4).map((product: TProduct) => (
           <div key={product?._id} className="p-4 w-full sm:w-1/2 lg:w-1/4">
             <MechanicalKeyboardCard product={product}></MechanicalKeyboardCard>
           </div>

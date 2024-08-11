@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type TProduct = {
+    
     _id: string;
     image: string;
     title: string;

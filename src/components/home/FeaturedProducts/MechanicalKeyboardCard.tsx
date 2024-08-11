@@ -1,41 +1,36 @@
 import { TProduct } from "@/types";
+import { Link } from "react-router-dom";
 
 const MechanicalKeyboardCard = ({ product }: { product: TProduct }) => {
   // console.log(Product);
 
   return (
-    <div className="bg-customAccent1 flex items-center justify-center">
-      <div className="w-full max-w-sm rounded overflow-hidden shadow-lg bg-white transform transition-transform duration-300 hover:scale-95">
-        <img className="w-full" src={product.image} alt="Card Image" />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{product.title}</div>
-          <p className="text-gray-700 text-base">Brand: {product.brand}</p>
-          <p className="text-gray-700 text-base">
-            Available Quantity: {product.availableQuantity}
-          </p>
-          <p className="text-gray-700 text-base">Price: ${product.price}</p>
-          <div className="text-yellow-500">
-            {"★".repeat(product.rating)}
-            {"☆".repeat(5 - product.rating)}
+    <div className="relative bg-customAccent1 overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+        <img
+          className="w-full h-64 object-cover object-center transition duration-500 ease-in-out transform hover:scale-110"
+          src={product.image}
+          alt={product.title}
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">
+          <div>
+            <h2 className="text-white text-xl font-bold mb-2">{product.title}</h2>
+            <p className="text-gray-300">Brand: {product.brand}</p>
+            <p className="text-gray-300">Available Quantity: {product.availableQuantity}</p>
+            <p className="text-gray-300">Price: ${product.price}</p>
+            <div className="text-yellow-400 mt-2">
+              {"★".repeat(product.rating)}
+              {"☆".repeat(5 - product.rating)}
+            </div>
           </div>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          {/* {product.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >
-              #{tag}
-            </span>
-          ))} */}
-        </div>
-        <div className="px-6 pb-4">
-          <button className="bg-customAccent2 hover:bg-customAccent1 text-white font-bold py-2 px-4 rounded">
-            See Details
+          
+          <Link to="/products">
+          <button className="mt-4 bg-customAccent2 hover:bg-customAccent1 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
+            See More
           </button>
+          
+          </Link>
         </div>
       </div>
-    </div>
   );
 };
 

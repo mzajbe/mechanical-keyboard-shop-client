@@ -1,4 +1,4 @@
-import Home from "./components/home/home/Home";
+import Home from "./pages/home/Home";
 
 
 

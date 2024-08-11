@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../../assets/images/hero/logo.png";
 
 const Navbar = () => {
@@ -12,8 +13,11 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">Home</a> {/* Increased text size */}
-                <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">Products</a> {/* Increased text size */}
+                
+                <Link to="/" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">Home</Link>
+
+                <Link  to="/products" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">Products</Link>
+
                 <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">About Us</a> {/* Increased text size */}
                 <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">Contact Us</a> {/* Increased text size */}
                 <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">Product Management/Dashboard</a> {/* Increased text size */}
