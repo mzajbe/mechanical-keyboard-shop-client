@@ -1,4 +1,5 @@
 import MainLayouts from "@/components/Layouts/MainLayouts";
+import ProductsCart from "@/pages/cart/ProductsCart";
 import Home from "@/pages/home/Home";
 import ProductDetails from "@/pages/productDetails/ProductDetails";
 import ProductsPage from "@/pages/productsPages/ProductsPage";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
           // Add a route for product details using the slug
           path: "/product/:id",
           element: <ProductDetails></ProductDetails>,
+        },
+        {
+          path: "/cart", // Add this route
+          element: <ProductsCart></ProductsCart>,
         },
       ],
     },
