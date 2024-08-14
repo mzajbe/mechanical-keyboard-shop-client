@@ -8,6 +8,7 @@ import SearchBar from "@/components/searchBar/SearchBar";
 import FilterWithPrice from "@/components/searchBar/FilterWithPrice";
 import Sorting from "@/components/searchBar/Sorting";
 import ClearFilter from "@/components/searchBar/ClearFilter";
+import { PacmanLoader } from "react-spinners";
 
 const ProductsPage = () => {
   const { data, isLoading, isError } = useGetProductsQuery({});
@@ -21,7 +22,11 @@ const ProductsPage = () => {
   );
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <PacmanLoader size={50} color={"#52796f"} loading={isLoading} />
+      </div>
+    );
   }
 
   if (isError) {

@@ -3,19 +3,19 @@
 const brands = [
     {
       logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
-      title: 'Brand 1',
+      title: 'Logitech',
     },
     {
       logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
-      title: 'Brand 2',
+      title: 'Keychron',
     },
     {
       logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
-      title: 'Brand 3',
+      title: 'Logitech',
     },
     {
       logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
-      title: 'Brand 4',
+      title: 'Keychron',
     },
   ];
 

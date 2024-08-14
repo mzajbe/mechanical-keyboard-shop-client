@@ -4,7 +4,7 @@ import MechanicalKeyboardCard from "./MechanicalKeyboardCard";
 import { TProduct } from "@/types";
 
 const MechanicalKeyboard = () => {
-  const { data, isLoading } = useGetProductsQuery({});
+  const { data, isLoading } = useGetProductsQuery();
   console.log(data);
 
   if (isLoading) {

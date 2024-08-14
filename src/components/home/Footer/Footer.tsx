@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left">
-            <h5 className="font-bold text-lg mb-2">Mechanical Keyboards</h5>
-            <p className="text-sm">© 2024 Mechanical Keyboards. All rights reserved.</p>
+            <h5 className="font-bold text-lg mb-2">Mecha71</h5>
+            <p className="text-sm">© 2024 Mecha71. All rights reserved.</p>
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-400">

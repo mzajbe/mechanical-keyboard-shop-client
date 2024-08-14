@@ -25,14 +25,14 @@ const Navbar = () => {
                 <Link to="/products" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
                   Products
                 </Link>
-                <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
+                <a href="/about" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
                   About Us
                 </a>
-                <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
+                <a href="/contact" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
                   Contact Us
                 </a>
-                <a href="#" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
-                  Product Management/Dashboard
+                <a href="/dashboard" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
+                  Dashboard
                 </a>
               </div>
             </div>

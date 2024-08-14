@@ -1,5 +1,10 @@
 import MainLayouts from "@/components/Layouts/MainLayouts";
+import AboutUs from "@/pages/aboutUs/AboutUs";
 import ProductsCart from "@/pages/cart/ProductsCart";
+import CheckOutPage from "@/pages/checkOut/CheckOutPage";
+import SuccessPage from "@/pages/checkOut/SuccessPage";
+import ContactUs from "@/pages/contactUs/ContactUs";
+import Dashboard from "@/pages/dashboardAndProductManagement/Dashboard";
 import Home from "@/pages/home/Home";
 import ProductDetails from "@/pages/productDetails/ProductDetails";
 import ProductsPage from "@/pages/productsPages/ProductsPage";
@@ -28,6 +33,27 @@ const router = createBrowserRouter([
           path: "/cart", // Add this route
           element: <ProductsCart></ProductsCart>,
         },
+        {
+          path: "/checkout",
+          element:<CheckOutPage></CheckOutPage>
+        },
+        {
+          path:"/success",
+          element:<SuccessPage></SuccessPage>
+        },
+        {
+          path:"/dashboard",
+          element:<Dashboard></Dashboard>
+        },
+        {
+          path:"/about",
+          element:<AboutUs></AboutUs>
+        },
+        {
+          path:"/contact",
+          element:<ContactUs></ContactUs>
+        }
+
       ],
     },
   ]);

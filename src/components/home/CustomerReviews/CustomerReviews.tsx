@@ -12,19 +12,19 @@ interface Review {
 const CustomerReviews = () => {
   const reviews: Review[] = [
     {
-      image: "https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg",
+      image: "https://i.postimg.cc/qRK56363/jurica-koletic-7-YVZYZe-ITc8-unsplash.jpg",
       name: "John Doe",
       review: "This product is amazing! Highly recommended.",
       rating: 5,
     },
     {
-      image: "https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg",
+      image: "https://i.postimg.cc/qRK56363/jurica-koletic-7-YVZYZe-ITc8-unsplash.jpg",
       name: "Jane Smith",
       review: "Great value for the price. Will buy again.",
       rating: 4,
     },
     {
-      image: "https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg",
+      image: "https://i.postimg.cc/qRK56363/jurica-koletic-7-YVZYZe-ITc8-unsplash.jpg",
       name: "Michael Johnson",
       review: "Good quality but a bit expensive.",
       rating: 3,
