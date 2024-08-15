@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const baseApi = createApi({
   reducerPath: "baseApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://mechanical-keyboard-shop-server-five.vercel.app/api" }),
   tagTypes: ["Products"], // Add this line to manage cache invalidation
   endpoints: (builder) => ({
     getProducts: builder.query<TProduct[], void>({
