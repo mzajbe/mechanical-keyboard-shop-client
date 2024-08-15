@@ -1,3 +1,5 @@
+
+import BlogList from "@/components/mechanicalKeyboard101/BlogList";
 import CustomerReviews from "../../components/home/CustomerReviews/CustomerReviews";
 import MechanicalKeyboard from "../../components/home/FeaturedProducts/MechanicalKeyboard";
 
@@ -18,6 +20,7 @@ const Home = () => {
             <ServiceAdvertisement></ServiceAdvertisement>
             <TopFeaturedBrands></TopFeaturedBrands>
             <CustomerReviews></CustomerReviews>
+            <BlogList></BlogList>
             <InstagramProfile></InstagramProfile>
             <InstagramLayout></InstagramLayout>
             

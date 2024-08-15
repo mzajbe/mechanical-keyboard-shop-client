@@ -2,20 +2,20 @@
 
 const brands = [
     {
-      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
+      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', 
       title: 'Logitech',
     },
     {
-      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
+      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', 
       title: 'Keychron',
     },
     {
-      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
-      title: 'Logitech',
+      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', 
+      title: 'AULA',
     },
     {
-      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', // Replace with actual logo URL
-      title: 'Keychron',
+      logo: 'https://i.postimg.cc/cJtB4w4Z/logitechjpg.jpg', 
+      title: 'Meetion',
     },
   ];
 

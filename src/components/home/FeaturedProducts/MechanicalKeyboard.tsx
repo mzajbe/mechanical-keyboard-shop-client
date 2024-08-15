@@ -11,6 +11,7 @@ const MechanicalKeyboard = () => {
     return <p>Loading...</p>;
   }
   const { data: products } = data;
+  
 
   return (
     <div className="container mx-auto p-4 max-w-7xl">

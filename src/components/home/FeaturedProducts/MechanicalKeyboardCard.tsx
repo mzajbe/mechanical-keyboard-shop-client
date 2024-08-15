@@ -2,7 +2,7 @@ import { TProduct } from "@/types";
 import { Link } from "react-router-dom";
 
 const MechanicalKeyboardCard = ({ product }: { product: TProduct }) => {
-  // console.log(Product);
+  
 
   return (
     <div className="relative bg-customAccent1 overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">

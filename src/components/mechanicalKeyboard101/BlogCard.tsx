@@ -10,7 +10,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         <img className="w-full" src={blog.image} alt={blog.title} />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{blog.title}</div>
-          <Link to={`/blog/${blog.id}`} className="text-blue-500 hover:text-blue-700">
+          <Link to={`/blog/${blog.id}`} className="text-customAccent1 hover:text-blue-700">
             Read more
           </Link>
         </div>

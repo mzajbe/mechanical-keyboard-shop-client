@@ -16,7 +16,7 @@ const BlogPage = () => {
   }
     return (
         <div className="container mx-auto my-10 p-5">
-      <button onClick={() => window.history.back()} className="mb-5 text-blue-500 hover:text-blue-700">
+      <button onClick={() => window.history.back()} className="mb-5 text-customAccent1 hover:text-blue-700">
         Back to Blogs
       </button>
       <h1 className="text-4xl font-semibold mb-5">{blog.title}</h1>

@@ -1,4 +1,5 @@
 import MainLayouts from "@/components/Layouts/MainLayouts";
+import BlogPage from "@/components/mechanicalKeyboard101/BlogPage";
 import AboutUs from "@/pages/aboutUs/AboutUs";
 import ProductsCart from "@/pages/cart/ProductsCart";
 import CheckOutPage from "@/pages/checkOut/CheckOutPage";
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         {
           path:"/contact",
           element:<ContactUs></ContactUs>
+        },
+        {
+          path:"/blog/:id",
+          element:<BlogPage></BlogPage>
         }
 
       ],

@@ -6,7 +6,7 @@ import { FaCartArrowDown } from "react-icons/fa";
 const Navbar = () => {
   // Get cart item count from Redux store
   const cartItemCount = useSelector((state: RootState) =>
-    // state.cart.items.reduce((count, item) => count + (item.availableQuantity-item.availableQuantity+1), 0)
+    
   state.cart.items.reduce((count, item) => count + item.quantity, 0)
   );
   return (
@@ -14,9 +14,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
+            {/* logo  */}
             <div className="flex-shrink-0">
+              <Link to="/">
               <img className="h-16 w-20" src={logo} alt="Logo" />
+              </Link>
+              
             </div>
+            {/* logo end  */}
+            {/* navbar items  */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link to="/" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
@@ -36,6 +42,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
+            {/* navbar items end  */}
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
@@ -89,14 +96,14 @@ const Navbar = () => {
           <Link to="/products" className="hover:bg-customAccent2 block px-3 py-2 rounded-md text-lg font-medium">
             Products
           </Link>
-          <a href="#" className="hover:bg-customAccent2 block px-3 py-2 rounded-md text-lg font-medium">
+          <a href="/about" className="hover:bg-customAccent2 block px-3 py-2 rounded-md text-lg font-medium">
             About Us
           </a>
-          <a href="#" className="hover:bg-customAccent2 block px-3 py-2 rounded-md text-lg font-medium">
+          <a href="/contact" className="hover:bg-customAccent2 block px-3 py-2 rounded-md text-lg font-medium">
             Contact Us
           </a>
-          <a href="#" className="hover:bg-customAccent2 block px-3 py-2 rounded-md text-lg font-medium">
-            Product Management/Dashboard
+          <a href="/dashboard" className="hover:bg-customAccent2 block px-3 py-2 rounded-md text-lg font-medium">
+            Dashboard
           </a>
         </div>
       </div>

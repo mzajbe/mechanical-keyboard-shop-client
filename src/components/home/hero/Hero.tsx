@@ -1,5 +1,5 @@
 import  { useState, useEffect } from "react";
-// import 'tailwindcss/tailwind.css';
+
 import hero1 from "../../../assets/images/hero/hero-1.jpg"
 import hero2 from "../../../assets/images/hero/hero-2.jpg"
 import hero3 from "../../../assets/images/hero/hero-3.jpg"
