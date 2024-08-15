@@ -26,12 +26,12 @@ const CheckOutPage = () => {
     e.preventDefault();
 
     if (userInfo.paymentMethod === 'Cash on Delivery') {
-      // Update stock
+      
       cartItems.forEach((item) => {
         dispatch(updateStock({ _id: item.product._id, quantity: item.quantity }));
       });
 
-      // Redirect to success page
+      
       navigate('/success');
     }
   };
@@ -92,7 +92,7 @@ const CheckOutPage = () => {
               className="w-full px-4 py-2 border rounded-md"
             >
               <option value="Cash on Delivery">Cash on Delivery</option>
-              {/* You can add more payment methods here */}
+              
             </select>
           </div>
           <button

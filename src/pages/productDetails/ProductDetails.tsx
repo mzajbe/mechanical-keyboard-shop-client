@@ -17,7 +17,6 @@ const ProductDetails = () => {
   }
 
   const { data: products } = data;
-  // Find the product using the MongoDB _id
   const Product = products.find((product: TProduct) => product._id === id);
 
   if (!Product) {
@@ -28,12 +27,10 @@ const ProductDetails = () => {
     if (product.availableQuantity > 0) {
       dispatch(addToCart(product));
     } else {
-      // Optionally, show a message to the user
       alert("Sorry, this product is out of stock.");
     }
   };
 
-  //   const product: TProduct = data;
 
   return (
     <div className="container mx-auto p-4 max-w-7xl">
@@ -79,7 +76,3 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
-
-// function useGetProductByIdQuery(id: string | undefined): { data: any; isLoading: any; } {
-//     throw new Error("Function not implemented.");
-// }

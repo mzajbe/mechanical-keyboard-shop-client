@@ -53,16 +53,16 @@ module.exports = {
         },
         // Custom Colors for Mechanical Keyboard Website
         customPrimary: {
-          DEFAULT: "#cad2c5",  // Off-White
-          foreground: "#000000",  // Black
+          DEFAULT: "#cad2c5",  
+          foreground: "#000000",  
         },
         customAccent1: {
-          DEFAULT: "#52796f",  // Burnt Orange
-          foreground: "#FFFFFF",  // White
+          DEFAULT: "#52796f",  
+          foreground: "#FFFFFF", 
         },
         customAccent2: {
-          DEFAULT: "#84a98c",  // Olive Green
-          foreground: "#FFFFFF",  // White
+          DEFAULT: "#84a98c", 
+          foreground: "#FFFFFF",  
         },
       },
       borderRadius: {

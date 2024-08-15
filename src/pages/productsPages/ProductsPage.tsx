@@ -16,7 +16,6 @@ const ProductsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
-  // Get filters and sorting options from Redux
   const { searchTerm, priceRange, sortOrder } = useSelector(
     (state: RootState) => state.filters
   );
@@ -35,14 +34,15 @@ const ProductsPage = () => {
 
   const products = data?.data || [];
 
-  // Apply search, filter, and sorting logic
   const filteredProducts = products
-    .filter((product: TProduct) =>
-      product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.brand.toLowerCase().includes(searchTerm.toLowerCase())
+    .filter(
+      (product: TProduct) =>
+        product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.brand.toLowerCase().includes(searchTerm.toLowerCase())
     )
-    .filter((product: TProduct) =>
-      product.price >= priceRange.min && product.price <= priceRange.max
+    .filter(
+      (product: TProduct) =>
+        product.price >= priceRange.min && product.price <= priceRange.max
     )
     .sort((a: TProduct, b: TProduct) => {
       if (sortOrder === "asc") {
@@ -72,49 +72,59 @@ const ProductsPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 max-w-7xl">
-      {/* Filter and Sort Controls */}
-      <div className="flex flex-col md:flex-row justify-between gap-4 mb-4">
-        <SearchBar />
-        <FilterWithPrice />
-        <Sorting />
-        <ClearFilter />
+    <div className="container mx-auto p-4 max-w-full">
+     
+      <div className=" w-1/4   ">
+      <div className="mb-4   mt-4">
+            <SearchBar/>
+          </div>
       </div>
 
-      {/* Product List */}
-      {filteredProducts.length > 0 ? (
-        <div className="flex flex-wrap -m-4">
-          {currentProducts.map((product: TProduct) => (
-            <div key={product._id} className="p-4 w-full sm:w-1/2 lg:w-1/4">
-              <ProductsPagesCard product={product} />
-            </div>
-          ))}
+      <div className="flex flex-col md:flex-row space-x-4">
+        <div className="md:w-1/4 space-y-4  mb-4 md:mb-0">
+          <FilterWithPrice />
+          <Sorting />
+          <ClearFilter />
         </div>
-      ) : (
-        <p className="text-center text-gray-700">
-          No products found matching your criteria.
-        </p>
-      )}
 
-      {/* Pagination Controls */}
-      <div className="flex justify-center space-x-4 mt-4">
-        <button
-          className="bg-customAccent2 hover:bg-customAccent1 text-white font-bold py-2 px-4 rounded"
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        <span className="text-gray-700">
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          className="bg-customAccent2 hover:bg-customAccent1 text-white font-bold py-2 px-4 rounded"
-          onClick={handleNextPage}
-          disabled={currentPage === totalPages}
-        >
-          Next
-        </button>
+        {/* Product List */}
+        <div className="md:w-3/4 -mt-14">
+          
+          {filteredProducts.length > 0 ? (
+            <div className="flex flex-wrap -m-4">
+              {currentProducts.map((product: TProduct) => (
+                <div key={product._id} className="p-4 w-full sm:w-1/2 lg:w-1/4">
+                  <ProductsPagesCard product={product} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-700">
+              No products found matching your criteria.
+            </p>
+          )}
+
+          {/* Pagination Controls */}
+          <div className="flex justify-center space-x-4 mt-4">
+            <button
+              className="bg-customAccent2 hover:bg-customAccent1 text-white font-bold py-2 px-4 rounded"
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </button>
+            <span className="text-gray-700">
+              Page {currentPage} of {totalPages}
+            </span>
+            <button
+              className="bg-customAccent2 hover:bg-customAccent1 text-white font-bold py-2 px-4 rounded"
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

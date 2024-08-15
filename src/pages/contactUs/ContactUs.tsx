@@ -12,17 +12,19 @@ const ContactUs = () => {
           
           <div className="mb-4">
             <h2 className="text-xl font-semibold text-customAccent1 mb-2">Email Us</h2>
-            <p className="text-gray-600">info@mechanicalkeyboard.com</p>
+            <p className="text-gray-600">mzajbe@gmail.com</p>
           </div>
           
           <div className="mb-4">
             <h2 className="text-xl font-semibold text-customAccent1 mb-2">Call Us</h2>
-            <p className="text-gray-600">+1 (234) 567-890</p>
+            <p className="text-gray-600">01643817731</p>
           </div>
           
           <div className="mb-4">
             <h2 className="text-xl font-semibold text-customAccent1 mb-2">Visit Us</h2>
-            <p className="text-gray-600">123 Keyboard Avenue, Switch City, MK 98765</p>
+            <p className="text-gray-600">39, Kazi Bhaban (4th Floor), New Elephant Road, Dhaka-1205
+
+</p>
           </div>
           
           <div className="mt-8 text-center">

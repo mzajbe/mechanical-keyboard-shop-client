@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { FaCartArrowDown } from "react-icons/fa";
 const Navbar = () => {
-  // Get cart item count from Redux store
+  
   const cartItemCount = useSelector((state: RootState) =>
     
   state.cart.items.reduce((count, item) => count + item.quantity, 0)

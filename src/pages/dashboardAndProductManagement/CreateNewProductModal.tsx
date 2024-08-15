@@ -9,9 +9,7 @@ interface CreateProductModalProps {
   closeModal: () => void;
 }
 
-// Define the Zod schema
 const productZodSchema = z.object({
-//   id: z.string().nonempty({ message: 'Product ID is required' }),
 title: z.string().nonempty({ message: 'Product title is required' }),
 price: z.number().min(0, { message: 'Product price must be 0 or greater' }),
 description: z.string().optional(),
@@ -42,7 +40,6 @@ const CreateNewProductModal: React.FC<CreateProductModalProps> = ({
   ) => {
     const { name, value } = e.target;
   
-    // Parse the value to a number if the input is for a numeric field
     const parsedValue = 
       name === "price" || 
       name === "availableQuantity" || 
@@ -56,11 +53,9 @@ const CreateNewProductModal: React.FC<CreateProductModalProps> = ({
     // Generate a unique id for the product
     const newProductWithId = { ...newProduct, id: `product-${uuidv4()}` };
 
-    // Validate the data with Zod
     const validationResult = productZodSchema.safeParse(newProductWithId);
 
     if (!validationResult.success) {
-      // If validation fails, show errors with toast notifications
       validationResult.error.errors.forEach((error) => {
         toast.error(error.message);
       });

@@ -26,12 +26,11 @@ const router = createBrowserRouter([
           element: <ProductsPage></ProductsPage>,
         },
         {
-          // Add a route for product details using the slug
           path: "/product/:id",
           element: <ProductDetails></ProductDetails>,
         },
         {
-          path: "/cart", // Add this route
+          path: "/cart", 
           element: <ProductsCart></ProductsCart>,
         },
         {
