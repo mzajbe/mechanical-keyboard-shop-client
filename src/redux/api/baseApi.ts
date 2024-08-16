@@ -8,7 +8,7 @@ export const baseApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://mechanical-keyboard-shop-server-five.vercel.app/api" }),
   tagTypes: ["Products"], // Add this line to manage cache invalidation
   endpoints: (builder) => ({
-    getProducts: builder.query<TProduct[], void>({
+    getProducts: builder.query({
       query: () => ({
         method: "GET",
         url: "/products",

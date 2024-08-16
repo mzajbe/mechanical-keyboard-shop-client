@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { TProduct } from "@/types";
 import { useUpdateProductMutation } from "@/redux/api/baseApi";
 
@@ -13,7 +13,7 @@ interface EditProductModalProps {
 const Modal: React.FC<EditProductModalProps> = ({ product, closeModal }) => {
   const [updatedProduct, setUpdatedProduct] = useState<TProduct>(product);
   const [updateProduct] = useUpdateProductMutation();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

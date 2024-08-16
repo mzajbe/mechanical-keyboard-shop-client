@@ -3,7 +3,7 @@ import ProductList from "./ProductList";
 import { PacmanLoader } from "react-spinners";
 
 const Dashboard = () => {
-  const { data, isLoading } = useGetProductsQuery();
+  const { data: data, isLoading } = useGetProductsQuery({});
 
   if (isLoading) {
     return (
@@ -13,12 +13,11 @@ const Dashboard = () => {
     );
   }
 
-  const { data: products } = data;
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold mb-6">Product Management Dashboard</h1>
 
-      <ProductList products={products} />
+      <ProductList products={data?.data} />
     </div>
   );
 };

@@ -16,7 +16,7 @@ const ProductList: React.FC<{ products: TProduct[] }> = ({ products }) => {
       try {
         await deleteProduct(productToDelete).unwrap();
         console.log("Product deleted successfully");
-        setProductToDelete(null); // Close the confirmation modal
+        setProductToDelete(null);
       } catch (error) {
         console.error("Failed to delete the product:", error);
       }

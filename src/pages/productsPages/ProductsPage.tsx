@@ -32,10 +32,8 @@ const ProductsPage = () => {
     return <p>Failed to load products. Please try again later.</p>;
   }
 
-  const products = data?.data || [];
-
-  const filteredProducts = products
-    .filter(
+  const products: TProduct[] = data?.data || []; 
+  const filteredProducts = products.filter(
       (product: TProduct) =>
         product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         product.brand.toLowerCase().includes(searchTerm.toLowerCase())
