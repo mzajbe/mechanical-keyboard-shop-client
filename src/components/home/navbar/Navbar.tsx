@@ -31,15 +31,15 @@ const Navbar = () => {
                 <Link to="/products" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
                   Products
                 </Link>
-                <a href="/about" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
-                  About Us
-                </a>
-                <a href="/contact" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
-                  Contact Us
-                </a>
-                <a href="/dashboard" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
-                  Dashboard
-                </a>
+                <Link to="/about" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
+                About Us
+                </Link>
+                <Link to="/contact" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
+                Contact Us
+                </Link>
+                <Link to="/dashboard" className="hover:bg-customAccent2 px-3 py-2 rounded-md text-lg font-medium">
+                Dashboard
+                </Link>
               </div>
             </div>
             {/* navbar items end  */}
