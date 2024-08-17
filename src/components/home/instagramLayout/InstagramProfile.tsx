@@ -1,6 +1,6 @@
 const InstagramProfile = () => {
   const profile = {
-    logo: "https://via.placeholder.com/150",
+    logo: "https://i.postimg.cc/Gmx2xYsx/test.jpg",
     username: "mechanicalkeyboards",
     followers: "10k",
     following: "500",
