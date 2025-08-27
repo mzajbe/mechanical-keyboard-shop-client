@@ -11,6 +11,7 @@ import TopFeaturedBrands from "../../components/home/TopFeaturedBrands/TopFeatur
 import Keycaps from "@/components/home/hero/Keycaps";
 import Switches from "@/components/home/hero/Switches";
 import Mice from "@/components/home/hero/Mice";
+import Brands from "@/components/home/brands/Brands";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Brands></Brands>
 
       <MechanicalKeyboard></MechanicalKeyboard>
       <ServiceAdvertisement></ServiceAdvertisement>
