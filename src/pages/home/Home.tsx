@@ -1,4 +1,3 @@
-
 import BlogList from "@/components/mechanicalKeyboard101/BlogList";
 import CustomerReviews from "../../components/home/CustomerReviews/CustomerReviews";
 import MechanicalKeyboard from "../../components/home/FeaturedProducts/MechanicalKeyboard";
@@ -9,23 +8,36 @@ import InstagramProfile from "../../components/home/instagramLayout/InstagramPro
 
 import ServiceAdvertisement from "../../components/home/ServiceAdvertisement/ServiceAdvertisement";
 import TopFeaturedBrands from "../../components/home/TopFeaturedBrands/TopFeaturedBrands";
-
+import Keycaps from "@/components/home/hero/Keycaps";
+import Switches from "@/components/home/hero/Switches";
+import Mice from "@/components/home/hero/Mice";
 
 const Home = () => {
-    return (
-        <div>
-            
-            <Hero></Hero>
-            <MechanicalKeyboard></MechanicalKeyboard>
-            <ServiceAdvertisement></ServiceAdvertisement>
-            <TopFeaturedBrands></TopFeaturedBrands>
-            <CustomerReviews></CustomerReviews>
-            <BlogList></BlogList>
-            <InstagramProfile></InstagramProfile>
-            <InstagramLayout></InstagramLayout>
-            
+  return (
+    <div className="w-4/5 mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="flex gap-6 mt-4 sm:flex-none">
+        <Hero></Hero>
+        <Keycaps></Keycaps>
+
+        <div className=" w-full h-[600px] sm:h-[800px] lg:h-[500px]">
+          <div className="mb-6">
+            <Switches></Switches>
+          </div>
+          <div>
+            <Mice></Mice>
+          </div>
         </div>
-    );
+      </div>
+
+      <MechanicalKeyboard></MechanicalKeyboard>
+      <ServiceAdvertisement></ServiceAdvertisement>
+      <TopFeaturedBrands></TopFeaturedBrands>
+      <CustomerReviews></CustomerReviews>
+      <BlogList></BlogList>
+      <InstagramProfile></InstagramProfile>
+      <InstagramLayout></InstagramLayout>
+    </div>
+  );
 };
 
 export default Home;

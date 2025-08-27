@@ -1,8 +1,8 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-import hero1 from "../../../assets/images/hero/hero-1.jpg"
-import hero2 from "../../../assets/images/hero/hero-2.jpg"
-import hero3 from "../../../assets/images/hero/hero-3.jpg"
+import hero1 from "../../../assets/images/hero/hero-1.jpg";
+import hero2 from "../../../assets/images/hero/hero-2.jpg";
+import hero3 from "../../../assets/images/hero/hero-3.jpg";
 
 interface Slide {
   image: string;
@@ -42,7 +42,7 @@ const Hero = () => {
     return () => clearInterval(slideInterval);
   }, []);
   return (
-    <div className="relative w-full h-[600px] sm:h-[800px] overflow-hidden">
+    <div className="relative xl:w-[4000px] xl:h-[450px] h-[250px] sm:h-[400px] 2xl:h-[500px] 2xl:w-[4000px] lg:w-[3000px] lg:h-[350px] overflow-hidden rounded-xl">
   {slides.map((slide, index) => (
     <div
       key={index}
@@ -55,53 +55,52 @@ const Hero = () => {
         alt={slide.title}
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
-        <h1 className="text-white text-2xl sm:text-4xl font-bold">
+      <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+        <h1 className="text-white text-xl sm:text-3xl lg:text-4xl font-bold">
           {slide.title}
         </h1>
-        <p className="text-white text-base sm:text-lg mt-2">
+        <p className="text-white text-sm sm:text-lg mt-2">
           {slide.description}
         </p>
       </div>
     </div>
   ))}
 
-  <div className="absolute inset-0 flex items-center justify-between p-4">
-    <button
-      className="bg-white bg-opacity-50 hover:bg-opacity-75 text-black font-bold py-2 px-4 rounded-full"
-      onClick={() =>
-        setCurrentSlide(
-          currentSlide === 0 ? slides.length - 1 : currentSlide - 1
-        )
-      }
-    >
-      Prev
-    </button>
-    <button
-      className="bg-white bg-opacity-50 hover:bg-opacity-75 text-black font-bold py-2 px-4 rounded-full"
-      onClick={() =>
-        setCurrentSlide(
-          currentSlide === slides.length - 1 ? 0 : currentSlide + 1
-        )
-      }
-    >
-      Next
-    </button>
-  </div>
+      <div className="absolute inset-0 flex items-center justify-between p-4">
+        <button
+          className="bg-white bg-opacity-50 hover:bg-opacity-75 text-black font-bold py-2 px-4 rounded-full"
+          onClick={() =>
+            setCurrentSlide(
+              currentSlide === 0 ? slides.length - 1 : currentSlide - 1
+            )
+          }
+        >
+          Prev
+        </button>
+        <button
+          className="bg-white bg-opacity-50 hover:bg-opacity-75 text-black font-bold py-2 px-4 rounded-full"
+          onClick={() =>
+            setCurrentSlide(
+              currentSlide === slides.length - 1 ? 0 : currentSlide + 1
+            )
+          }
+        >
+          Next
+        </button>
+      </div>
 
-  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-    {slides.map((_, index) => (
-      <button
-        key={index}
-        className={`w-3 h-3 rounded-full ${
-          index === currentSlide ? "bg-white" : "bg-gray-500"
-        }`}
-        onClick={() => setCurrentSlide(index)}
-      />
-    ))}
-  </div>
-</div>
-
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`w-3 h-3 rounded-full ${
+              index === currentSlide ? "bg-white" : "bg-gray-500"
+            }`}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
