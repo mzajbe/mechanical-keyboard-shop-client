@@ -43,28 +43,28 @@ const Hero = () => {
   }, []);
   return (
     <div className="relative xl:w-[4000px] xl:h-[450px] h-[250px] sm:h-[400px] 2xl:h-[500px] 2xl:w-[4000px] lg:w-[3000px] lg:h-[350px] overflow-hidden rounded-xl">
-  {slides.map((slide, index) => (
-    <div
-      key={index}
-      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-        index === currentSlide ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <img
-        src={slide.image}
-        alt={slide.title}
-        className="w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-white text-xl sm:text-3xl lg:text-4xl font-bold">
-          {slide.title}
-        </h1>
-        <p className="text-white text-sm sm:text-lg mt-2">
-          {slide.description}
-        </p>
-      </div>
-    </div>
-  ))}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+            <h1 className="text-white text-xl sm:text-3xl lg:text-4xl font-bold">
+              {slide.title}
+            </h1>
+            <p className="text-white text-sm sm:text-lg mt-2">
+              {slide.description}
+            </p>
+          </div>
+        </div>
+      ))}
 
       <div className="absolute inset-0 flex items-center justify-between p-4">
         <button
