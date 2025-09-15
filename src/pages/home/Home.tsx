@@ -16,12 +16,13 @@ import Brands from "@/components/home/brands/Brands";
 const Home = () => {
   return (
     <div className="w-4/5 mx-auto px-4 sm:px-6 lg:px-8 ">
-      <div className="flex gap-6 mt-4 sm:flex-none">
+      {/* flex gap-6 mt-4 sm:flex-none */}
+      <div className="flex gap-6 mt-4 ">
         <Hero></Hero>
         <Keycaps></Keycaps>
 
         <div className=" w-full h-[600px] sm:h-[800px] lg:h-[500px]">
-          <div className="mb-6">
+          <div className="mb-6 ">
             <Switches></Switches>
           </div>
           <div>
